@@ -597,7 +597,11 @@ MIT — Veja [LICENSE](../LICENSE)
 
 ## 👤 Autor
 
-**Bryan Faria Lima** - [@bryanfarialima](https://github.com/bryanfarialima)
+**Bryan Faria Lima**
+
+- 📧 Email: [bryanfarialima@gmail.com](mailto:bryanfarialima@gmail.com)
+- 🐙 GitHub: [@bryanfarialima](https://github.com/bryanfarialima)
+- 💼 LinkedIn: [www.linkedin.com/in/bryanfarialima](https://www.linkedin.com/in/bryanfarialima)
 
 ---
 

@@ -492,8 +492,10 @@ Variações:
   • Clássica (3 opções)
   • PPLS (5 opções)
 
-Autor: Bryan Faria
-GitHub: github.com/bryanfarialima/Pedra-Papel-Tesoura
+Autor: Bryan Faria Lima
+Email: bryanfarialima@gmail.com
+GitHub: github.com/bryanfarialima
+LinkedIn: www.linkedin.com/in/bryanfarialima
 
 Boas práticas:
   • Type hints completos
