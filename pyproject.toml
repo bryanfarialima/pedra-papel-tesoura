@@ -1,0 +1,124 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pedra-papel-tesoura"
+version = "1.1.0"
+description = "Jogo Pedra, Papel e Tesoura - Implementação profissional com múltiplos modos e variações"
+authors = [ { name = "Bryan Faria Lima", email = "bryanfarialima@gmail.com" } ]
+readme = "Pedra_Papel_Tesoura/README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+keywords = ["game", "pedra-papel-tesoura", "entertainment", "multiplayer"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Games/Entertainment",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "flake8>=6.0",
+    "mypy>=1.0",
+    "isort>=5.12",
+]
+
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/bryanfarialima/pedra-papel-tesoura"
+Documentation = "https://github.com/bryanfarialima/pedra-papel-tesoura/blob/main/Pedra_Papel_Tesoura/README.md"
+Repository = "https://github.com/bryanfarialima/pedra-papel-tesoura.git"
+Issues = "https://github.com/bryanfarialima/pedra-papel-tesoura/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["Pedra_Papel_Tesoura*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39', 'py310', 'py311', 'py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # Diretórios
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+skip_gitignore = true
+skip = [".gitignore", ".dockerignore"]
+known_first_party = ["Pedra_Papel_Tesoura"]
+
+[tool.pytest.ini_options]
+testpaths = ["Pedra_Papel_Tesoura/tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--strict-markers",
+    "--tb=short",
+    "--disable-warnings",
+]
+
+[tool.coverage.run]
+source = ["Pedra_Papel_Tesoura"]
+omit = [
+    "*/tests/*",
+    "*/venv/*",
+    "*/__main__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING",
+]
+precision = 2
+skip_covered = false
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.pylint]
+max-line-length = 88
+
